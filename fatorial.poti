@@ -1,0 +1,16 @@
+fatorial(numero: Inteiro): Inteiro
+    se (numero == 0 ou numero == 1) entao
+        1
+    senão
+        se numero > 1 entao
+            numero * fatorial(numero - 1)
+        senão
+            0
+        fim
+    fim
+fim
+
+escreva("• • • calculadora de fatorial • • •")
+imprima("Digite um número inteiro: ")
+fator = leia_inteiro
+escreva "{fator}! = {fatorial(fator)}"
