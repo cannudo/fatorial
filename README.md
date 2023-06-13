@@ -1,4 +1,5 @@
 # fatorial
+O objetivo deste programa é apresentar a lógica do cálculo fatorial e tentar explicá-la para um(a) professor(a) de Língua Portuguesa.
 
 ## Apresentação
 
@@ -11,6 +12,8 @@ Esta pergunta surgiu nos meus pensamentos em uma [rápida conversa](https://twit
 
 ### Como fazer isso?
 Pretendo fazê-lo escrevendo a lógica do cálculo fatorial e explicando, passo-a-passo, como o computador vai processar o código-fonte gerado. A escolha do Potigol se deu por ser uma linguagem escrita em Português do Brasil e por ela suportar a programação estruturada.
+
+Para iniciar nossa jornada na compreensão do cálculo fatorial, vamos começar com algumas definições importantes e responder a perguntas fundamentais sobre o assunto. Essas respostas serão essenciais para a construção do programa em Potigol.
 
 ## Definições, perguntas e respostas
 
