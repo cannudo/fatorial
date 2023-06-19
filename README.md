@@ -1,29 +1,51 @@
-# Fatorial
+# Isolamento de erro: fatorial de números maiores que 12
 
-Programa escrito em [Potigol](http://potigol.github.io) 🦐 para determinar o valor de um número fatorial.
+Nos testes manuais, percebeu-se que o fatorial de números grandes não é retornado como esperado.
 
-## Pergunta motivacional
-🤔 Será que é possível explicar, para uma professora de Língua Portuguesa, como o computador calcula o fatorial de um número usando a sintaxe do [Potigol](http://potigol.github.io)?
+## ✔️ Comportamento esperado
+```terminal
+• • • calculadora de fatorial • • •
+Digite um número inteiro: 50
+50! = 30414093201713378043612608166064768844377641568960512000000000000
+```
 
-## Definição de fatorial
-O fatorial de um número <var>n</var> é o produto dos números naturais consecutivo de 1 até <var>n</var>.
+## ⚠️ O que rola
+```terminal
+• • • calculadora de fatorial • • •
+Digite um número inteiro: 50
+50! = 0
+```
 
-É representado por um número inteiro seguido por um ponto de exclamação.
+(doguinho Caramelo)
 
-### Exemplo
-_Quanto é 5! (cinco fatorial)?_
-> 5! = 5 · 4 · 3 · 2 · 1 = 120 (cinco fatorial é igual a cento e vinte, pois cento e vinte é o produto dos números naturais de um um até cinco).
+Em uma jornada exploratória, descobriu-se também que:
+* Para números menores que 50, o retorno não é 0. Mesmo assim, não é o valor correto. Veja, por exemplo, com 13:
+```terminal
+• • • calculadora de fatorial • • •
+Digite um número inteiro: 13
+13! = 1932053504
+```
+* O limite para o cálculo correto é 12:
+```terminal
+• • • calculadora de fatorial • • •
+Digite um número inteiro: 12
+12! = 479001600
+```
 
-## Antes de começar
-Algumas perguntas podem surgir imediatamente após se ler a definição de fatorial. Por exemplo:
+## Técnicas utilizadas
+Para isolar o erro, mudou-se algumas coisas no código.
+* Em primeiro lugar, as linhas referentes à entrada e saída do valor em questão foram removidas;
+* Então, foi inclusa uma atribuição de valor manual. Dessa forma, poderemos apenas rodar o código e comparar a saída com o valor esperado;
+* O valor atribuido foi 13, por ser um incremento direto do limite para o cálculo correto.
 
-_Quando se quer saber o fatorial de 0, como faz? Fatorial de 1? Existe fatorial de número negativo?_
-> Seja <var>n</var> o número do qual se deseja descobrir o fatorial, <var>n</var> deve ser maior ou igual a 0 (n ≥ 0). Ou seja: _não existe fatorial de números negativos._ Caso <var>n</var> seja 0 ou 1, o fatorial de <var>n</var> é 1.
-
-💡 Essas respostas serão importantes na construção do programa.
-
-## Instruções para execução do código
+## Execução dos testes
 Assumindo que você já tenha instalado o Potigol, digite na linha de comandos (usando Debian GNU/Linux):
 ```terminal
 java -jar potigol.jar fatorial.poti
+```
+
+## ✔️ Comportamento esperado
+```terminal
+• • • calculadora de fatorial • • •
+13! = 6227020800
 ```
