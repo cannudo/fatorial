@@ -64,3 +64,10 @@ fatorial(numero: InteiroGrande): InteiroGrande =
 ```
 
 O  código completo da solução está neste commit e está sujeito à decisão final do autor, uma vez que estes detalhes são mais técnicos e não agregam tanto valor para o objetivo final: explicar como o computador calcula o fatorial de um número.
+
+## 👨‍⚖️ Decisão final
+Por se tratar de um detalhe muito técnico, não convém colocar a declaração de um outro tipo numérico no código-fonte. Só ia inflar a explicação de uma lógica relativamente simples com detalhes impertinentes ao dia-a-dia do personagem usuário final: um(a) professor(a) de Língua Portuguesa.
+
+Então, simplesmente foi colocada mais uma condição ```se``` no código-fonte, que verifica se o número de entrada é maior que 12.
+
+É importante lembrar de colocar este limite na explicação e fazer os diálogos necessários para que se entenda o porquê dele existir.

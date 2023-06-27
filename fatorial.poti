@@ -1,6 +1,4 @@
-tipo InteiroGrande = BigInt
-
-fatorial(numero: InteiroGrande): InteiroGrande =
+fatorial(numero: Inteiro): Inteiro =
     se (numero == 0 ou numero == 1) entao
         1
     senão
@@ -8,10 +6,14 @@ fatorial(numero: InteiroGrande): InteiroGrande =
     fim
 
 escreva("• • • calculadora de fatorial • • •")
-imprima("Digite um número inteiro: ")
-numero = 13
+imprima("Digite um número inteiro (0-12): ")
+numero = leia_inteiro
 se (numero < 0) então
     escreva("{numero} é um número negativo. Não existe fatorial de números negativos.")
 senão
-    escreva("{numero}! = {fatorial(numero)}")
+    se (numero > 12)
+        escreva("Número acima do limite suportado.")
+    senão
+        escreva("{numero}! = {fatorial(numero)}")
+    fim
 fim
