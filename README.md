@@ -34,7 +34,7 @@ Digite um número inteiro: 12
 
 ## Técnicas utilizadas
 Para isolar o erro, mudou-se algumas coisas no código.
-* Em primeiro lugar, as linhas referentes à entrada e saída do valor em questão foram removidas;
+* Em primeiro lugar, as linhas referentes à entrada do valor em questão foram removidas;
 * Então, foi inclusa uma atribuição de valor manual. Dessa forma, poderemos apenas rodar o código e comparar a saída com o valor esperado;
 * O valor atribuido foi 13, por ser um incremento direto do limite para o cálculo correto.
 

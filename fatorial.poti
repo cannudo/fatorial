@@ -6,8 +6,9 @@ fatorial(numero: Inteiro): Inteiro =
     fim
 
 escreva("• • • calculadora de fatorial • • •")
-imprima("Digite um número inteiro: ")
-numero = leia_inteiro
+
+numero = 13
+
 se (numero < 0) então
     escreva("{numero} é um número negativo. Não existe fatorial de números negativos.")
 senão
