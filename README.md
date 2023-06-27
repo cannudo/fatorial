@@ -49,3 +49,18 @@ java -jar potigol.jar fatorial.poti
 • • • calculadora de fatorial • • •
 13! = 6227020800
 ```
+
+## ✅ Solução
+Após uma pesquisa no código-fonte do Potigol, constatou-se que o erro se dá pelo tamanho do número do resultado que, por ser muito grande, não é suportado por padrão pelo Potigol.
+
+A solução consiste na declaração de um tipo numérico que suporta um valor maior, que o Potigol pega eprestado da linguagem [Scala](https://www.scala-lang.org/): o _BigInt_.
+
+Nó código-fonte ```fatorial.poti```, as principais mudanças são:
+
+```potigol
+tipo InteiroGrande = BigInt
+
+fatorial(numero: InteiroGrande): InteiroGrande =
+```
+
+O  código completo da solução está neste commit e está sujeito à decisão final do autor, uma vez que estes detalhes são mais técnicos e não agregam tanto valor para o objetivo final: explicar como o computador calcula o fatorial de um número.
