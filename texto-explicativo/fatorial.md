@@ -14,6 +14,26 @@ Esta pesquisa é importante para que se possa ter uma ideia sobre se é possíve
 
 ## Desenvolvimento
 
-[código-fonte Potigol]
+```potigol
+fatorial(numero: Inteiro): Inteiro =
+    se (numero == 0 ou numero == 1) entao
+        1
+    senão
+        numero * fatorial(numero - 1)
+    fim
+
+escreva("• • • calculadora de fatorial • • •")
+imprima("Digite um número inteiro (0-12): ")
+numero = leia_inteiro
+se (numero < 0) então
+    escreva("{numero} é um número negativo. Não existe fatorial de números negativos.")
+senão
+    se (numero > 12)
+        escreva("Número acima do limite suportado.")
+    senão
+        escreva("{numero}! = {fatorial(numero)}")
+    fim
+fim
+```
 
 ## Conclusão
